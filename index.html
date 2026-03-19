@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Atelophobia The Poem</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+  <script src="script.js"></script>
+</head>
+<body>
+
+  <!-- LANDING PAGE -->
+
+  <main class="landing" id="landing">
+    <h1 class="title">Atelophobia</h1>
+    <p class="caption">Based on "Black Swan" movie.</p>
+    <img src="/Users/phuong/Downloads/ballerina cover page.png" id="ballerina" />
+    <img src="/Users/phuong/Downloads/Untitled_Artwork 29.png" id="blur">
+  </main>
+
+  <!-- OVERLAY -->
+  <div class="overlay" id="overlay">
+    <p class="start-text" id="startBtn">Click to start.</p>
+  </div>
+
+  <!-- MUSIC -->
+  <audio id="music" loop>
+    <source src="/Users/phuong/Downloads/YTDown.com_YouTube_Lana-Del-Rey-Salvatore-Piano-Cover_Media_mpTI1M3Fm9o_001_1080p.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const btn = document.getElementById("startBtn");
+    const overlay = document.getElementById("overlay");
+    const landing = document.getElementById("landing");
+    const music = document.getElementById("music");
+
+    btn.addEventListener("click", () => {
+
+      // play music
+      music.play();
+
+      // clear blur + dark
+      landing.classList.add("active");
+
+      // fade overlay
+      overlay.classList.add("hide");
+
+      // remove overlay after animation
+      setTimeout(() => {
+        overlay.style.display = "none";
+      }, 1500);
+    });
+  </script>
+
+</body>
+</html>

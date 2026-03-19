@@ -1,0 +1,130 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:black;
+  overflow:hidden;
+  font-family: serif;
+}
+/*LANDING PAGE*/
+.landing{
+  width:100%;
+  height:100vh;
+  position:relative;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  filter: blur(10px) brightness(0.3);
+  transition: 1.5s ease;
+}
+
+.landing.active{
+  filter: blur(0px) brightness(1);
+}
+/* FONT TITLE */
+@font-face {
+  font-family: "LaGraziela";
+  src: url("/Users/phuong/Downloads/la_graziela/La Graziela Script Demo.otf") format("opentype");
+}
+.title{
+  position: absolute;
+  left: 8vw;
+  top: 40%;
+  transform: translateY(-50%);
+
+  font-family: "LaGraziela", serif;
+  font-size: 180px;
+  font-weight: normal;
+  color: rgba(255,255,255,0.9);
+  letter-spacing: 8px;
+  z-index: 5;
+
+  opacity: 0;
+  transition: opacity 3s ease;
+  transition-delay: 1s;
+}
+.landing.active .title{
+  opacity: 3;
+}
+.title:hover{
+    filter: blur(2px);
+    transition: 0.5s;
+    color: rgb(140, 139, 139);
+    
+}
+ /* FONT (BASED ON BLACK SWAN MOVIE */
+ 
+ .caption{
+    font-family: "Playball", serif;
+    position: absolute;
+    left: 25vw;
+    top: 49%;
+    font-size: 20px;
+    letter-spacing: 4px;
+    color: white;
+    z-index: 5;
+      opacity: 0;
+  transition: opacity 4s ease;
+  transition-delay: 2s;
+ }
+.landing.active .caption{
+  opacity: 5; 
+}
+.title:hover{
+    filter: blur(2px);
+    transition: 0.5s;
+    color: rgb(140, 139, 139);}
+.caption:hover{
+        filter: blur(2px);
+    transition: 0.5s;
+    color: rgb(140, 139, 139);}
+
+/*BACKGROUND*/
+
+
+/* BALLERINA 1*/
+#ballerina{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  height: 1000px;
+  width: auto;
+  z-index: 2;
+  text-shadow: 15px;
+}
+.overlay{
+  position:fixed;
+  inset:0;
+  background: rgba(1, 1, 5, 0.45); 
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:10;
+  transition: opacity 1.5s ease;
+}
+
+.overlay.hide{
+  opacity:0;
+  pointer-events:none;
+}
+
+.start-text{
+  color:#cfcfe6;
+  font-size:30px;
+  letter-spacing:1px;
+  cursor:pointer;
+  opacity:0.8;
+  transition:0.4s ease;
+}
+
+.start-text:hover{
+  opacity:1;
+  transform:scale(1.15);
+}
+
+.music {
+    animation-delay: -3s;
+}
